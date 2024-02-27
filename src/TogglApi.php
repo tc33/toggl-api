@@ -337,13 +337,14 @@ class TogglApi extends BaseApiClass
     /**
      * Delete project.
      *
+     * @param int   $workspaceId
      * @param int $projectId
      *
      * @return bool|mixed|object
      */
-    public function deleteProject($projectId)
+    public function deleteProject($workspaceId, $projectId)
     {
-        return $this->DELETE('projects/'.$projectId);
+        return $this->workspace($workspaceId)->deleteProject($projectId);
     }
 
     /**

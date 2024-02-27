@@ -159,6 +159,18 @@ class TogglTrackWorkspaceApi extends BaseApiClass
     }
 
     /**
+     * Delete project.
+     *
+     * @param int $projectId
+     *
+     * @return bool|mixed|object
+     */
+    public function deleteProject($projectId)
+    {
+        return $this->DELETE('projects/' . $projectId);
+    }
+
+    /**
      * Get project.
      *
      * @param int $projectId
