@@ -64,9 +64,9 @@ class TogglTrackWorkspaceApi extends BaseApiClass
      *
      * @see https://github.com/toggl/toggl_api_docs/blob/master/chapters/clients.md
      */
-    public function createClient($clientData)
+    public function createClient($client)
     {
-        return $this->POST("clients", $clientData);
+        return $this->POST("clients", $client);
     }
 
     /**
